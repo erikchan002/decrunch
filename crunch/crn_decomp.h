@@ -403,7 +403,11 @@ typedef uint64 ptr_bits;
 #ifdef __x86_64__
 typedef uint64 ptr_bits;
 #else
+#ifdef __aarch64__
+typedef uint64 ptr_bits;
+#else
 typedef uint32 ptr_bits;
+#endif
 #endif
 #endif
 
